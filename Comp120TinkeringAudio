@@ -64,8 +64,21 @@ def playEcho():
 
 #Parsing Tokens Into Audio
 #frequency = 440.0 * 2.0 ** (note_number / 12.0) 
-
+def parsingTokens():
+  tones = requestString("Enter notes, Example: A,B,C,D,E,F")
+  seconds = 1
+  print tones
+  
 #random audio generation
 import random
-
+def randomToneGen(length):
+  tones = [-1,-3,-5,-7,-8,-9]
+  soundBoard = makeEmptySoundBySeconds(1)
+  seconds = 1
+  for i in range(length):
+    seconds += 1
+    toneNo = random.choice(tones)
+    frequency = 440.0 * 2.0 ** (toneNo / 12.0)
+    sound = toneGeneration(frequency,3000,1)
+    play(sound)
 
