@@ -90,12 +90,5 @@ def randomToneGen(length):
     sound = toneGeneration(frequency,3000,1)
     return sound
 
-#Main
+#Main- Here you would use what has been provided to create more complex melodies.
 def main():
-  a = randomToneGen(4)
-  play(a)
-  time.sleep(0.3)
-  a = randomToneGen(2)
-  play(a)
-  a = randomToneGen(2)
-  
